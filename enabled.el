@@ -4,5 +4,8 @@
 (if (file-exists-p "~/.emacs.d/macros/c_header.el")
     (load-file "~/.emacs.d/macros/c_header.el"))
 
+(if (file-exists-p "~/.emacs.d/macros/c_routines.el")
+    (load-file "~/.emacs.d/macros/c_routines.el"))
+
 (if (file-exists-p "~/.emacs.d/macros/license.el")
     (load-file "~/.emacs.d/macros/license.el"))

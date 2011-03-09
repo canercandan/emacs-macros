@@ -45,7 +45,7 @@ public:
 ~\C-y() {}
 \C-y(const \C-y& _\C-y) { *this = _\C-y; }
 
-void operator=(const \C-y&)
+void operator=(const \C-y& _\C-y)
 {
 if (this != &_\C-y)
 {

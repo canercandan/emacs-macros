@@ -12,7 +12,7 @@ public:
 \C-y();
 ~\C-y();
 \C-y(const \C-y&);
-void\C-[ioperator=(const \C-y&);
+void operator=(const \C-y&);
 };
 
 #endif // !_\C-y_h

@@ -13,7 +13,7 @@ public:
 \C-y();
 ~\C-y();
 \C-y(const \C-y&);
-void operator=(const \C-y&);
+\C-y& operator=(const \C-y&);
 };
 
 #endif // !_\C-y_h
@@ -27,7 +27,7 @@ void operator=(const \C-y&);
 \C-y::~\C-y() {}
 \C-y::\C-y(const \C-y& o) { *this = o; }
 
-void \C-y::operator=(const \C-y& o)
+\C-y& \C-y::operator=(const \C-y& o)
 {
 if (this != &o)
 {
@@ -45,7 +45,7 @@ public:
 ~\C-y() {}
 \C-y(const \C-y& o) { *this = o; }
 
-void operator=(const \C-y& o)
+\C-y& operator=(const \C-y& o)
 {
 if (this != &o)
 {

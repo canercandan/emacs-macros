@@ -18,23 +18,40 @@ void\C-[ioperator=(const \C-y&);
 #endif // !_\C-y_h
 ")
 
+;; (fset 'user-cpp-content
+;;       "\C-a\C-k\
+;; #include \"\C-y.h\"
+
+;; \C-y::\C-y()
+;; {}
+
+;; \C-y::~\C-y()
+;; {}
+
+;; \C-y::\C-y(const \C-y& _\C-y\C-[[1;5D\C-[l)
+;; {
+;; \(void)_\C-y\C-[[1;5D\C-[l;
+;; }
+
+;; void\C-[i\C-y::operator=(const \C-y& _\C-y\C-[[1;5D\C-[l)
+;; {
+;; \(void)_\C-y\C-[[1;5D\C-[l;
+;; }
+;; ")
+
 (fset 'user-cpp-content
       "\C-a\C-k\
 #include \"\C-y.h\"
 
-\C-y::\C-y()
-{}
+\C-y::\C-y() {}
+\C-y::~\C-y() {}
+\C-y::\C-y(const \C-y& _\C-y) { *this = _\C-y; }
 
-\C-y::~\C-y()
-{}
-
-\C-y::\C-y(const \C-y& _\C-y\C-[[1;5D\C-[l)
+void \C-y::operator=(const \C-y& _\C-y)
 {
-\(void)_\C-y\C-[[1;5D\C-[l;
+if (this != &_\C-y)
+{
 }
-
-void\C-[i\C-y::operator=(const \C-y& _\C-y\C-[[1;5D\C-[l)
-{
-\(void)_\C-y\C-[[1;5D\C-[l;
+return *this;
 }
 ")

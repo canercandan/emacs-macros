@@ -25,11 +25,11 @@ void operator=(const \C-y&);
 
 \C-y::\C-y() {}
 \C-y::~\C-y() {}
-\C-y::\C-y(const \C-y& _\C-y) { *this = _\C-y; }
+\C-y::\C-y(const \C-y& o) { *this = o; }
 
-void \C-y::operator=(const \C-y& _\C-y)
+void \C-y::operator=(const \C-y& o)
 {
-if (this != &_\C-y)
+if (this != &o)
 {
 }
 return *this;
@@ -43,11 +43,11 @@ class \C-y
 public:
 \C-y() {}
 ~\C-y() {}
-\C-y(const \C-y& _\C-y) { *this = _\C-y; }
+\C-y(const \C-y& o) { *this = o; }
 
-void operator=(const \C-y& _\C-y)
+void operator=(const \C-y& o)
 {
-if (this != &_\C-y)
+if (this != &o)
 {
 }
 return *this;
